@@ -1,0 +1,35 @@
+.button-circle-wrapper {
+  cursor: pointer;
+  border: none;
+  background-color: rgb(45, 208, 207);
+  padding: 10px 17px;
+  border-radius: 20px;
+}
+
+.button-circle-wrapper:hover {
+  background-color: rgba(45, 208, 207, 0.6);
+}
+
+.white {
+  background-color: transparent;
+}
+
+.white:hover {
+  background-color: transparent;
+}
+
+.button-circle-name {
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.white .button-circle-name {
+  color: rgb(165, 164, 172);
+}
+
+@media screen and (max-width:767) {
+  .white .button-circle-name {
+    color: #FFF
+  }
+}
