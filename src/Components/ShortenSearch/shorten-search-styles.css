@@ -1,9 +1,20 @@
-.shorten__main {
+.shorter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.shorter__main {
+  display: flex;
+  justify-content: center;
+  width: 80vw;
+}
+
+.shorten__main-container {
   display: flex;
   position: relative;
-  width: 100%;
+  width: 90%;
   height: 120px;
-  margin: 0 5%;
   overflow: hidden;
   border-radius: 10px;
   align-items: center;
@@ -50,4 +61,21 @@
   height: 100%;
   object-fit: cover;
   z-index: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .shorter__main {
+    width: 100vw;
+  }
+
+  .shorten__search-container {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .shorten__search-bar {
+    width: 90%;
+    padding: 10px 5%;
+    margin-bottom: 10px;
+  }
 }

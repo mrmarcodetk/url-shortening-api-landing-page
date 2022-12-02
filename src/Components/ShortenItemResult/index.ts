@@ -1,0 +1,1 @@
+export { default as ShortenItemResult } from './ShortenItemResult';
