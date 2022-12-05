@@ -10,19 +10,7 @@ import { useEffect, useState } from "react"
 export interface MainInterface { }
 
 const Main: React.FC<MainInterface> = () => {
-  const [link, setLInk] = useState()
-  const fetchShorterLink = async () => {
-    const { data } = await getShorterLInkAction()
-    setLInk(data);
-  }
-
-  useEffect(() => {
-    try {
-      fetchShorterLink().then(() => console.log(link))
-    } catch (error) {
-      console.log("🚀 ~ file: Main.tsx:23 ~ useEffect ~ error", error)
-    }
-  }, [])
+ 
 
   return (
     <main className="main__container">
