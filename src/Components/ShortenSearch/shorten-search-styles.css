@@ -40,7 +40,45 @@
   z-index: 2;
 }
 
-.shorten__search-bar input {
+.shorten__search-bar.show-error-empty {
+  position: relative;
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgb(250, 77, 77);
+}
+
+.shorten__search-bar.show-error-link {
+  position: relative;
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgb(250, 77, 77);
+}
+
+
+.shorten__search-bar.show-error-empty::before {
+  content: "Please add a link";
+  position: absolute;
+  font-size: 12px;
+  color: rgb(250, 77, 77);
+  bottom: 0;
+  left: 0;
+  font-style: italic;
+  transform: translateY(25px);
+}
+
+.shorten__search-bar.show-error-link::before {
+  content: "The link entered is not correct";
+  position: absolute;
+  font-size: 12px;
+  color: rgb(250, 77, 77);
+  bottom: 0;
+  left: 0;
+  font-style: italic;
+  transform: translateY(25px);
+}
+
+
+.shorten__input-search-validation {
   width: 100%;
   border: none;
   outline: none;

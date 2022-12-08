@@ -1,14 +1,17 @@
 import React from 'react';
 import { ButtonSimple } from '../ButtonSimple';
 import "./shorten-item-result-styles.css"
-export interface ShortenItemResultInterface { }
+export interface ShortenItemResultInterface {
+	shortLink: string;
+	originalLink: string;
+}
 
-const ShortenItemResult: React.FC<ShortenItemResultInterface> = () => {
+const ShortenItemResult: React.FC<ShortenItemResultInterface> = ({ shortLink, originalLink }) => {
 	return (
 		<div className='shorten__item-result-container'>
-			<span className='shorter__item-result-current-link'>https://www.frontendmentor.io</span>
-			<span className='shorter__item-result-new-link'>https://www.reLink/k4KyK</span>
-			<ButtonSimple nameButton="Copy" />
+			<span className='shorter__item-result-current-link'>{originalLink}</span>
+			<span className='shorter__item-result-new-link'>{shortLink}</span>
+			<ButtonSimple nameButton="Copy" onClick={() => { }} />
 		</div>
 	)
 };
